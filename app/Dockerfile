@@ -4,6 +4,7 @@ WORKDIR /app
 RUN groupadd -r webservice && useradd --no-log-init -r -g webservice webservice
 COPY . .
 RUN pip install -r requirements.txt
+RUN echo hello
 
 USER webservice:webservice
 
